@@ -6,7 +6,7 @@ pipeline{
                 steps {
                     git branch: 'declartive', 
                     url:'https://github.com/dumrepo/game-of-life.git'
-                    sh 'mvn compile'
+                    sh 'mvn package'
                     }
             }
         }
