@@ -1,6 +1,6 @@
 pipeline{
     agent {label 'MASTER'}
-       parameters { text(name: '', defaultValue: '\n', description: '') }
+       parameters { booleanParam(name: 'DEBUG_BUILD', defaultValue: true, description: 'This option will be default true') }
 	stages{
             stage('clone and compile') {
                 steps {
@@ -11,3 +11,6 @@ pipeline{
             }
         }
 }
+
+
+
