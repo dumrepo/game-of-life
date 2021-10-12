@@ -1,6 +1,5 @@
 pipeline{
-    agent {label 'UBUNTU'}
-       parameters{string(name: '', defaultValue: '', description: '')}
+    agent {label 'MASTER'}
        parameters { text(name: '', defaultValue: '\n', description: '') }
 	stages{
             stage('clone and compile') {
@@ -12,4 +11,3 @@ pipeline{
             }
         }
 }
-
